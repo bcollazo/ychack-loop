@@ -3,3 +3,5 @@ var main = function() {
 		$(this).toggleClass("activate");
 	});
 };
+
+$(document).ready(main);
