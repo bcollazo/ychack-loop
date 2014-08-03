@@ -23,7 +23,7 @@
 		  		<div class="row request-row">
 		  			<div class="col-xs-3">
 		  				<p class="text-center">
-		  					<%= image_tag(f.image_url, :class=> "img-circle profile-pic") %>
+		  					<%= image_tag("placeholder.png", :class=> "img-circle profile-pic") %>
 		  				</p>
 		  			</div>
 		  			<div class="col-xs-9">
@@ -37,7 +37,7 @@
 		  </div>
 		  <div class="tab-pane" id="requests_content">
 		  	<% @requestors.each do |f| %>
-		  		<div class="row request-row" data-id="<%= f.id %>">
+		  		<div class="row request-row">
 		  			<div class="col-xs-12">
 		  			<p class="lead">
 		  				<i class="fa fa-envelope"></i>
@@ -56,7 +56,7 @@
 		  		<div class="row request-row">
 		  			<div class="col-xs-3">
 		  				<p class="text-center">
-		  					<%= image_tag(f.image_url, :class=> "img-circle profile-pic") %>
+		  					<%= image_tag("placeholder.png", :class=> "img-circle profile-pic") %>
 		  				</p>
 		  			</div>
 		  			<div class="col-xs-9">
@@ -117,13 +117,6 @@
 		  </ul>
 		</div>
       </div>
-<<<<<<< HEAD
-=======
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-      </div>
->>>>>>> 76379e3e8157e71d975efbe46b6d3b465ca87faf
     </div>
   </div>
 </div>
@@ -152,13 +145,6 @@
 		  </ul>
 		</div>
       </div>
-<<<<<<< HEAD
-=======
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-      </div>
->>>>>>> 76379e3e8157e71d975efbe46b6d3b465ca87faf
     </div>
   </div>
 </div>
@@ -177,11 +163,11 @@
 		    go golfing
 		  </button>
 		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">chill</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">go golfing</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">see a movie</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">grab dinner</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">go to the park</a></li>
-		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">chill</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">play basketball</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">hit the bars</a></li>
 		    <li role="presentation"><a role="menuitem" tabindex="-1" data-dismiss="modal">get fucking shwasted</a></li>
@@ -192,65 +178,31 @@
   </div>
 </div>
 
-<div class="home_background night">
-	<div id="sentence_page">
-		<div class="container">
-			<div class="row">
-				<div id="sentence" class="col-md-offset-4 col-md-4 col-xs-12">
-					<!-- Button trigger modal -->
-					<p class="text-center">
-						<a data-toggle="modal" data-target="#menuModal">
-							<%= image_tag("hang_logo_night.png", :class => "logo") %>
-						</a>
-					</p>
 
-					<h1>I'm be down to hang</h1>
-					<h1>at <a id="start" class="green-text night" data-hour="20" data-toggle="modal" data-target="#startModal">8:00pm</a></h1>
-					<h1>for <a id="duration" class="green-text night" data-duration="2" data-toggle="modal" data-target="#durationModal">2 Hours</a></h1>
-					<h1>I want to</h1>
-					<h1><a class="green-text night">go golfing</a></h1>
-					<!-- <ul id="categories">
-						<li>I want to hangout</li>
-					</ul> -->
-					<h1><i id="add_category_btn" class="fa fa-plus"></i></h1>
-					<button id="hang_btn" class="btn btn-block btn-lg">Hang</button>
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="home_background" class="night">
+	<div class="container">
+		<div class="row">
+			<div id="sentence" class="col-md-offset-4 col-md-4 col-xs-12">
+				<!-- Button trigger modal -->
+				<p class="text-center">
+					<a data-toggle="modal" data-target="#menuModal">
+						<%= image_tag("hang_logo_night.png") %>
+					</a>
+				</p>
 
-
-<<<<<<< HEAD
 				<h1>I'm down to hang</h1>
 				<h1>at <a id="start" class="green-text night" data-hour="20" data-toggle="modal" data-target="#startModal">8:00pm</a></h1>
-				<h1>for <a id="duration" class="green-text night" data-duration="2" data-toggle="modal" data-target="#durationModal">2 Hours</a></h1>
+				<h1>for <a id="duration" class="green-text night" data-duration="2" data-toggle="modal" data-target="#durationModal">1 hour</a></h1>
 				<h1>I want to</h1>
 				<ul class="list-unstyled" id="actList">
-					<li><h1><a class="green-text night activityItem" id="firstActivity">go golfing</a></h1></li>
+					<li><h1><a class="green-text night activityItem" id="firstActivity">chill</a></h1></li>
 					<!-- <ul id="categories">
 						<li>I want to hangout</li>
 					</ul> -->
 				</ul>
 				<h1><a id ="activity" data-toggle="modal" data-target="#activitiesModal"><i id="add_category_btn" class="fa fa-plus"></i></a></h1>
-				
+
 				<button id="hang_btn" class="btn btn-block btn-lg">Select friends</button>
-=======
-	<div id="invite_page" style="display: none;">
-		<div id="invite_container" class="container">
-			<div class="row">
-				<div class="col-md-offset-4 col-md-4 col-xs-12">
-					<button id="invite_all_btn" class="btn btn-success btn-block">Everyone</button>
-					<% @friends.each do |f| %>
-					<div class="row user-row" data-id="<%= f.id %>">
-						<p class="lead">
-							<%= f.name || f.email %><br />
-							<span><%= f.phone %></span>
-						</p>
-					</div>
-					<% end %>
-					<button id="invite_some_btn" class="btn btn-success btn-block">Invite</button>
-				</div>
->>>>>>> 76379e3e8157e71d975efbe46b6d3b465ca87faf
 			</div>
 		</div>
 	</div>

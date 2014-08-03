@@ -67,7 +67,7 @@ $(document).ready(function() {
 	});
 
 
-	$(".activityItem:not(#firstActivity)").click(function() {
+	$(".activityItem").click(function() {
 		$(this).remove();
 	});
 
