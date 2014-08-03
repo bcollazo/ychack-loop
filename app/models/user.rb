@@ -7,7 +7,9 @@ class User < ActiveRecord::Base
 
 	def self.search(query)
 		if query != nil
-			name = User.where("UPPER(name) LIKE UPPER(?)", query)
+			name = User.where("UPPER(name) LIKE UPPER(?) OR "+\
+				"UPPER(email) LIKE UPPER(?) OR phone LIKE ?", 
+				"%#{query}%", "%#{query}%", "%#{query}%")
 			return name
 		end
 		return []

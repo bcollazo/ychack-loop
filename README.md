@@ -1,4 +1,8 @@
 ychack-loop
 ===========
 
-Loop.  Social Platform to go out and do.  Hack for YC Hackathon.
+Used to be Loop; now Hang.  Match with friends that are down to hang at the same time.
+
+
+######Resources
+https://github.com/spacialdb/gcm
