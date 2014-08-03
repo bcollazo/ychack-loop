@@ -19,8 +19,19 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Sign Up</a></li>
-      </ul>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+              <%= form_for(@user, as: "user", url: session_path(@user)) do |f| %>
+              <li><div class="form-group"><%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "email" %></div></li>
+              <li><div class-"form-group"><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off", :class => "form-control", :placeholder => "password"  %></div></li>
+              <li class="divider"></li>
+              <li><div><%= f.submit "Sign in", :class => "btn btn-primary" %></div></li>
+              <% end %>
+          </ul>
+        </li>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -33,9 +44,8 @@
         <p>Do you want to hang?</p>
         <div class="row" id ="spacer">
           <div class="col-xs-6">
-            <form class="form-horizontal">
-              <%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
               <fieldset>
+                <%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
                 <div class="form-group"><%= f.label :email %><br />
                   <%= f.email_field :email, autofocus: true, :class => 'form-control' %>
                 </div>
@@ -50,7 +60,14 @@
                 <div><%= f.submit "Sign up", :class => 'btn btn-primary'%></div>
               <% end %>
               </fieldset>
-            </form>
+            
+
+
+
+
+
+
+
           </div>
         </div>
       </div>
