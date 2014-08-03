@@ -19,22 +19,23 @@ class Sentence < ActiveRecord::Base
 		end
 
 		contactList = []
-		names = []
+		name = x.name || x.email
 		matches.each do |m|
 			puts "MATCHED! ", m
 			contactList.push(m.phone)
-			names.push(m.name)
 		end
 
-		if names.count > 0
-			puts "SENDING TEXTS TO ", contactList, names
-			send_texts(contactList, names)
+		if contactList.count > 0
+			puts "SENDING TEXTS TO ", contactList, name
+			send_texts(contactList, name)
 		end
 
 		return matches
 	end
 
-	def self.send_texts(contactList, names)
+	def self.send_texts(contactList, name)
+		return;
+		
 		account_sid = 'ACf2a92ef7eb689f3b18157adb7e6d0795'
 		auth_token = 'ef3a597812db185905327911f6048f6f'
 
@@ -44,7 +45,7 @@ class Sentence < ActiveRecord::Base
 		$num = contactList.length
 
 		begin
-			body = names[$i] + " is down to Hang!"
+			body = name + " is down to Hang!"
 			puts $i, body
 
 			@client.account.messages.create({

@@ -22,9 +22,8 @@ $(document).ready(function() {
 	});
 
 	$("#hang_btn").click(function() {
-		// location.href = "/invite";
 		$("#sentence_page").fadeOut(function() {
-			$("#invite_page").fadeIn();	
+			$("#invite_page").fadeIn();
 		});
 	});
 
