@@ -74,6 +74,7 @@ $(document).ready(function() {
 
 
 	$("#hang_btn").click(function() {
+<<<<<<< HEAD
 		var data = {};
 
 		var hour = parseInt($("#start").data("hour"));
@@ -93,6 +94,11 @@ $(document).ready(function() {
 			if (data) {
 				location.href = "/invite"; //Change to effect
 			}
+=======
+		// location.href = "/invite";
+		$("#sentence_page").fadeOut(function() {
+			$("#invite_page").fadeIn();	
+>>>>>>> 76379e3e8157e71d975efbe46b6d3b465ca87faf
 		});
 	});
 
@@ -115,6 +121,9 @@ $(document).ready(function() {
 		var id = $(this).data("id");
 		$.post("/accept_friend", {requestee_id: id}, function(data) {
 			console.log(data);
+			if (data) {
+				$(".request-row[data-id="+id+"]").fadeOut();
+			}
 		});
 	});
 

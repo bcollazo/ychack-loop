@@ -18,7 +18,47 @@ class Sentence < ActiveRecord::Base
 			end
 		end
 
+		contactList = []
+		names = []
+		matches.each do |m|
+			puts "MATCHED! ", m
+			contactList.push(m.phone)
+			names.push(m.name)
+		end
+
+		if names.count > 0
+			puts "SENDING TEXTS TO ", contactList, names
+			send_texts(contactList, names)
+		end
+
 		return matches
+	end
+
+	def self.send_texts(contactList, names)
+		account_sid = 'ACf2a92ef7eb689f3b18157adb7e6d0795'
+		auth_token = 'ef3a597812db185905327911f6048f6f'
+
+		@client = Twilio::REST::Client.new account_sid, auth_token
+		
+		$i = 0
+		$num = contactList.length
+
+		begin
+			body = names[$i] + " is down to Hang!"
+			puts $i, body
+
+			@client.account.messages.create({
+				:body => body,
+				:to => contactList[$i],    # Replace with your phone number
+				:from => "+17633332014"   # Replace with your Twilio number
+			})
+			
+			$i += 1
+			
+			rescue Twilio::REST::RequestError => e
+				puts e.message
+
+		end while $i < $num
 	end
 
 	def matches(s)

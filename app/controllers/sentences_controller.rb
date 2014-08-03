@@ -13,6 +13,7 @@ class SentencesController < ApplicationController
 		puts "end", args[:end]
 		puts "location", args[:location]
 		puts "categories", args[:categories]
+		puts "invitees", args[:invitees]
 
 		# Right now we only support one sentence in flight
 		x = Sentence.find_by_user_id(current_user.id)
@@ -25,7 +26,8 @@ class SentencesController < ApplicationController
 			:end => args[:end],
 			:duration => args[:duration],
 			:location => args[:location],
-			:categories => args[:categories])
+			:categories => args[:categories],
+			:invitees => args[:invitees])
 
 		render :json => x.to_json
 	end
@@ -59,8 +61,10 @@ class SentencesController < ApplicationController
 			end
 		end
 
+		invitees = params[:invitees].to_s || "EVERYONE"
+
 		return {:start => start, :end => end_time, :location => location,
-			:categories => categories, :duration => duration}
+			:categories => categories, :duration => duration, :invitees => invitees}
 	end
 
 end

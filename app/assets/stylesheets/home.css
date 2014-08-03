@@ -2,12 +2,12 @@ html, body {
 	height: 100%;
 }
 
-#home_background.night {
+.home_background.night {
 	background: #1d3043;
 	color: white;
 	height: 100%;
 }
-#home_background.day {
+.home_background.day {
 	background: #bdc4c7;
 }
 .green-text.night {
@@ -48,7 +48,7 @@ html, body {
 	padding: 2px;
 }
 
-#sentence p img {
+.logo {
 	margin-top: 20px;
 	height: 50px;
 	cursor: pointer;

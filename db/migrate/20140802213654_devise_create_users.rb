@@ -3,6 +3,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
       t.string :name
       t.string :phone
+      t.string :image_url, default: "placeholder.png"
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
