@@ -55,6 +55,9 @@
 	display: inline-block;
 }
 
+#bottom-row {
+	margin-bottom: 2em;
+}
 #dth-block
 {
 	display: block;
