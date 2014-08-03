@@ -39,11 +39,11 @@
 <div class = "jumbotron">
   <div class = "container-fluid">
     <div class = "row">
-      <div class= "col-xs-6 col-xs-offset-1" id="jumbo-text">
+      <div class= "col-md-6 col-md-offset-1 col-xs-12" id="jumbo-text">
         <h1>Welcome to Hang</h1>
         <p>Do you want to hang?</p>
         <div class="row" id ="spacer">
-          <div class="col-xs-6">
+          <div class="col-md-6 col-xs-12">
               <fieldset>
                 <%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
                 <div class="form-group"><%= f.label :email %><br />
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class = "col-xs-4" id="fist">
+      <div class = "col-md-4 col-xs-12" id="fist">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
           <!-- Indicators -->
           <!-- Wrapper for slides -->

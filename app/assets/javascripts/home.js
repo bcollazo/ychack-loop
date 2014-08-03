@@ -12,6 +12,8 @@ window.addEventListener("load",function() {
 
 $(document).ready(function() {
 
+	var usedActivities = [];
+
 	$("#startModal .dropdown-menu a").click(function() {
 		var hour = $(this).text();
 		var dhour = $(this).data("hour");
@@ -20,6 +22,56 @@ $(document).ready(function() {
 		$("#start").text(hour);
 		$("#start").attr("data-hour", dhour);
 	});
+
+	$("#durationModal .dropdown-menu a").click(function() {
+		var dur = $(this).text();
+		var ddur = $(this).data("duration");
+		console.log(ddur);
+		$("#dropdownMenu1").text(dur);
+		$("#duration").text(dur);
+		$("#duration").attr("data-duration", ddur);
+	});
+
+
+	$("#activitiesModal a").click(function() {
+		var $parent = $(this).parents('li');
+		$parent.css('display', 'none');
+		var val = $(this).text();
+		if(usedActivities.indexOf(val) === -1){
+			// add
+			usedActivities.push(val);
+			console.log(val);
+			$('#actList').append('<li data-text="'+val+'"><h1><a class=" activityItem green-text night">' + val + '</a></h1></li>');
+			$('li[data-text="'+val+'"]').on('click', function(){
+
+				var dataval = $(this).attr('data-text');
+				console.log(dataval);
+
+				$parent.css('display', 'block');
+
+				// remove
+				usedActivities.splice(usedActivities.indexOf(dataval), 1);
+
+				$(this).remove();
+
+				// // remove
+				// usedActivities.splice(usedActivities.indexOf(val), 1);
+			});
+
+		} else {
+			// // remove
+			// usedActivities.splice(usedActivities.indexOf(val), 1);
+
+		}
+		console.log(usedActivities);
+	});
+
+
+	$(".activityItem:not(#firstActivity)").click(function() {
+		$(this).remove();
+	});
+
+
 
 	$("#hang_btn").click(function() {
 		var data = {};
@@ -31,6 +83,9 @@ $(document).ready(function() {
 
 		var duration = parseInt($("#duration").data("duration"));
 		data["duration"] = duration;
+
+		// activites/categories
+		var my_act = usedActivities.join(",");
 
 		console.log(data);
 		$.post("/sentence", data, function(data) {

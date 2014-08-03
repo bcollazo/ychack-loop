@@ -17,6 +17,9 @@ html, body {
 	color: #169f84;
 }
 
+.hidden-dropdown-activity {
+	display:none;
+}
 #menuModal .tab-pane {
 	max-height: 300px;
 	overflow-y: auto;
