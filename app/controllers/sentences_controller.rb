@@ -26,8 +26,6 @@ class SentencesController < ApplicationController
 			:duration => args[:duration],
 			:location => args[:location],
 			:categories => args[:categories])
-		
-		Sentence.find_matches(current_user.id)
 
 		render :json => x.to_json
 	end
@@ -37,14 +35,9 @@ class SentencesController < ApplicationController
 	private
 	def parse_args(params)
 		puts params
-		puts "00000"
 		start = params[:start]
-		puts start
-		puts "asdf"
 		if start != nil || start != ""
-			puts "hereee"
 			start = DateTime.parse(start)
-			puts start
 		else
 			start = DateTime.now
 		end

@@ -3,7 +3,7 @@ class Sentence < ActiveRecord::Base
 	def self.find_matches(user_id)
 		x = User.find_by_id(user_id)
 		if x == nil
-			return nil
+			return []
 		end
 		friends = x.friends
 
@@ -11,8 +11,10 @@ class Sentence < ActiveRecord::Base
 		s = Sentence.find_by_user_id(x.id)
 		friends.each do |f|
 			fs = Sentence.find_by_user_id(f.id)
-			if s.matches(fs)
-				matches.push(f)
+			if fs != nil
+				if s.matches(fs)
+					matches.push(f)
+				end
 			end
 		end
 

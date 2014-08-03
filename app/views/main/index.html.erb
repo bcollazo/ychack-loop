@@ -33,7 +33,6 @@
         <p>Do you want to hang?</p>
         <div class="row" id ="spacer">
           <div class="col-xs-6">
-            <form class="form-horizontal">
               <%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
               <fieldset>
                 <div class="form-group"><%= f.label :email %><br />
@@ -48,9 +47,8 @@
                   <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control' %></div>
 
                 <div><%= f.submit "Sign up", :class => 'btn btn-primary'%></div>
+                </fieldset>
               <% end %>
-              </fieldset>
-            </form>
           </div>
         </div>
       </div>

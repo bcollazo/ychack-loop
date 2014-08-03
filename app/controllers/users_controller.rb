@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 	end
 
 	def matched
-		@matches = Sentences.find_matches(current_user.id)
+		@matches = Sentence.find_matches(current_user.id)
 	end
 
 	def friends

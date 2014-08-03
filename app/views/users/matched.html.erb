@@ -3,10 +3,10 @@
 		<div class="row">
 			<div class="col-md-offset-4 col-md-4 col-xs-12">
 			<p class="text-center"><%= image_tag("hang_logo_night.png") %></p>
-			<% if @matched.count <= 0 %>
+			<% if @matches.count <= 0 %>
 				<p class="text-center lead">No matches yet.  We will notify you when there's a match</p>
 			<% else %>
-				<% @matched.each do |m| %>
+				<% @matches.each do |m| %>
 				<div class="row request-row">
 		  			<div class="col-xs-3">
 		  				<p class="text-center">

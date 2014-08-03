@@ -12,6 +12,15 @@ window.addEventListener("load",function() {
 
 $(document).ready(function() {
 
+	$("#startModal .dropdown-menu a").click(function() {
+		var hour = $(this).text();
+		var dhour = $(this).data("hour");
+		console.log(dhour);
+		$("#start_dropdown").text(hour);
+		$("#start").text(hour);
+		$("#start").attr("data-hour", dhour);
+	});
+
 	$("#hang_btn").click(function() {
 		var data = {};
 

@@ -70,7 +70,6 @@
       <div class="modal-footer">
       	<%= link_to('Logout', destroy_user_session_path, :method => :delete, :class => "btn btn-danger pull-left") %> 
 		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
@@ -87,13 +86,34 @@
       </div>
       <div class="modal-body">
         <div class="dropdown">
-		  <button class="btn btn-default btn-block dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+		  <button class="btn btn-default btn-block dropdown-toggle" type="button" id="start_dropdown" data-hour="20" data-toggle="dropdown">
 		    8:00pm
 		  </button>
-		  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-		    <li role="presentation"><a role="menuitem" tabindex="-1">9:00pm</a></li>
-		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10:00pm</a></li>
-		    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">11:00pm</a></li>
+		  <ul class="dropdown-menu" role="menu" aria-labelledby="start_dropdown">
+		  	<li role="presentation"><a role="menuitem" tabindex="-1" data-hour="12">12:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="13">1:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="14">2:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="15">3:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="16">4:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="17">5:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="18">6:00pm</a></li>
+   		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="19">7:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="20">8:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="21">9:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="22">10:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="23">11:00pm</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="0">12:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="1">1:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="2">2:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="3">3:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="4">4:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="5">5:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="6">6:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="7">7:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="8">8:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="9">9:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="10">10:00am</a></li>
+		    <li role="presentation"><a role="menuitem" tabindex="-1" data-hour="11">11:00am</a></li>
 		  </ul>
 		</div>
       </div>
