@@ -8,7 +8,7 @@
       </div> -->
       <div class="modal-body">
         <!-- Nav tabs -->
-		<ul class="nav nav-tabs" role="tablist">
+		<ul class="nav nav-tabs" id="menu_tabs" role="tablist">
 		  <li class="active"><a href="#friends_content" role="tab" data-toggle="tab">Friends</a></li>
 		  <li><a href="#settings_content" role="tab" data-toggle="tab">Setting</a></li>
 		</ul>
@@ -17,12 +17,17 @@
 		<div class="tab-content">
 		  <div class="tab-pane active" id="friends_content">
 		  	<% @users.each do |f| %>
-		  		<div class="row">
-		  			<div class="col-xs-4">
-		  				<img class="img-circle">
+		  		<div class="row request-row">
+		  			<div class="col-xs-3">
+		  				<p class="text-center">
+		  					<%= image_tag("placeholder.png", :class=> "img-circle profile-pic") %>
+		  				</p>
 		  			</div>
-		  			<div class="col-xs-8">
-		  				<p class="lead">Bryan Collazo</p>
+		  			<div class="col-xs-9">
+		  				<p class="lead"><%= f.name %></p>
+		  				<p class="lead">
+		  					<button class="btn btn-primary pull-right send-request-btn" data-id="<%= f.id %>">Send Friend Request</button>
+		  				</p>
 		  			</div>
 		  		</div>
 		  	<% end %>
@@ -124,7 +129,6 @@
     </div>
   </div>
 </div>
-
 
 
 <div id="home_background" class="night">

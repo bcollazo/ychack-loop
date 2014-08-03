@@ -12,6 +12,14 @@ class UsersController < ApplicationController
 		render :json => users.to_json		
 	end
 
+	def invite
+		@friends = current_user.friends
+	end
+
+	def matched
+		@matched = []
+	end
+
 	def friends
 		x = current_user.friends
 

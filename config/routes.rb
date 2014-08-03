@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get '/users/friends' => 'users#friends'
 
   post '/sentence' => 'sentences#create'
+  get '/invite' => 'users#invite'
+  get '/matched' => 'users#matched'
 
   post '/friend_request' => 'friends#send_request'
   post '/accept_friend' => 'friends#accept'

@@ -5,8 +5,11 @@ class FriendsController < ApplicationController
 
 		x = FriendRequest.find_by_requestor_id_and_requestee_id(current_user.id, requestee_id)
 		if x == nil
-			FriendRequest.create(:requestor_id => current_user.id,
+			x = FriendRequest.create(:requestor_id => current_user.id,
 				:requestee_id => requestee_id)
+			render :json => x.to_json
+		else
+			render :nothing => true
 		end
 	end
 

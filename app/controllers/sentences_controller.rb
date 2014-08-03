@@ -1,6 +1,6 @@
 class SentencesController < ApplicationController
 
-		def create
+	def create
 		# TODO: add authorization
 		args = parse_args(params)
 		if args == nil
@@ -9,10 +9,10 @@ class SentencesController < ApplicationController
 		end
 
 		puts "+===============+"
-		puts "start", args["start"]
-		puts "end", args["end"]
-		puts "location", args["location"]
-		puts "categories", args["categories"]
+		puts "start", args[:start]
+		puts "end", args[:end]
+		puts "location", args[:location]
+		puts "categories", args[:categories]
 
 		# Right now we only support one sentence in flight
 		x = Sentence.find_by_user_id(current_user.id)
@@ -21,11 +21,11 @@ class SentencesController < ApplicationController
 		end
 
 		x = Sentence.create(:user_id => current_user.id,
-			:start => args["start"],
-			:end => args["end"],
-			:duration => args["duration"],
-			:location => args["location"],
-			:categories => args["categories"])
+			:start => args[:start],
+			:end => args[:end],
+			:duration => args[:duration],
+			:location => args[:location],
+			:categories => args[:categories])
 		
 		Sentence.find_matches(current_user.id)
 
@@ -36,20 +36,26 @@ class SentencesController < ApplicationController
 
 	private
 	def parse_args(params)
+		puts params
+		puts "00000"
 		start = params[:start]
-		if start != nil
+		puts start
+		puts "asdf"
+		if start != nil || start != ""
+			puts "hereee"
 			start = DateTime.parse(start)
+			puts start
 		else
 			start = DateTime.now
 		end
 
 		duration = params[:duration]
 		if duration != nil && params[:duration].to_i != 0
-			duration = params[:duration].to_i
+			duration = params[:duration].to_i * 3600
 		else
 			duration = 2.hours
 		end
-		end_time = start + duration
+		end_time = (start.to_time + duration).to_datetime
 
 		location = params[:location].to_s || ""
 

@@ -23,12 +23,20 @@ $(document).ready(function() {
 		var duration = parseInt($("#duration").data("duration"));
 		data["duration"] = duration;
 
-		
-
 		console.log(data);
-		// $.post("/sentence", data, function(data) {
-		// 	console.log(data);
-		// });
+		$.post("/sentence", data, function(data) {
+			console.log(data);
+			if (data) {
+				location.href = "/invite"; //Change to effect
+			}
+		});
+	});
+
+	$(".send-request-btn").click(function() {
+		var id = $(this).data("id");
+		$.post("/friend_request", {requestee_id: id}, function(data) {
+			console.log(data);
+		});
 	});
 
 });
