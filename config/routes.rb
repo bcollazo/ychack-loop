@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root 'main#home'
+  devise_for :users
+
+  root 'main#index'
+  get '/home' => 'users#home'
+  get '/sentence' => 'users#post_sentence'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
