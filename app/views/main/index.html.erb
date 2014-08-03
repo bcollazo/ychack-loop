@@ -52,6 +52,23 @@
       <div class= "col-xs-8 col-xs-offset-2" id="first-jumbo">
         <h1>Welcome to Hang</h1>
         <p>Hang answers the question: Who wants to hang?</p>
+
+	<!-- Graham, this is the form.  Put it anywhere you want and style it with css.  Thanks -->
+	<%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
+
+	  <div><%= f.label :email %><br />
+	  <%= f.email_field :email, autofocus: true %></div>
+
+	  <div><%= f.label :password %><br />
+	    <%= f.password_field :password, autocomplete: "off" %></div>
+
+	  <div><%= f.label :password_confirmation %><br />
+	    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+	  <div><%= f.submit "Sign up" %></div>
+	<% end %>
+
+
         <ul class="list-unstyled">                    
             <li>Test</li>
         </ul>

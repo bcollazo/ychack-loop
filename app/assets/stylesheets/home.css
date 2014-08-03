@@ -1,0 +1,42 @@
+html, body {
+	height: 100%;
+}
+
+/*COLORING*/
+#home_background.night {
+	background: #1d3043;
+	color: white;
+	height: 100%;
+}
+#home_background.day {
+	background: #bdc4c7;
+}
+.green-text.night {
+	color: #18bc9c;
+}
+.green-text.day {
+	color: #169f84;
+}
+
+/*SENTENCE*/
+#sentence h1 {
+	font-size: 2.5em !important;
+}
+#sentence a {
+	cursor: pointer;
+}
+#sentence a:hover {
+	text-decoration: none;
+}
+#add_category_btn {
+	cursor: pointer;
+	color: white;
+}
+
+#hang_btn {
+	background-color: #18bc9c;
+}
+#hang_btn:hover {
+	background-color: #169f84;
+	color: white;
+}
