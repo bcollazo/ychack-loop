@@ -3,7 +3,15 @@ Rails.application.routes.draw do
 
   root 'main#index'
   get '/home' => 'users#home'
-  get '/sentence' => 'users#post_sentence'
+  get '/users/search' => 'users#search'
+  get '/users/friends' => 'users#friends'
+
+  post '/sentence' => 'sentences#create'
+
+  post '/friend_request' => 'friends#send_request'
+  post '/accept_friend' => 'friends#accept'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
