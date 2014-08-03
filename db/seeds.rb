@@ -9,7 +9,7 @@ User.create(:name => "Bryan Collazo", :phone => "7873145590", :email => "bcollaz
 	:password_confirmation => "password")
 User.create(:name => "Dalton Viggers", :phone => "5159747923", :email => "dalton.viggers@yahoo.com", :password => "password",
 	:password_confirmation => "password", :image_url => "dalton.png")
-User.create(:name => "Graham Turk", :phone => "5165246421", :email => "gturk@mit.edu", :password => "password",
+User.create(:name => "Graham Turk", :phone => "5165246421", :email => "gturk@princeton.edu", :password => "password",
 	:password_confirmation => "password")
 User.create(:name => "Mike Pruszinske", :phone => "7632224628", :email => "mikep@iastate.edu", :password => "password",
 	:password_confirmation => "password", :image_url => "mikep.png")
