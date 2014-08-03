@@ -1,8 +1,17 @@
 class UsersController < ApplicationController
 
 	def home
-		@user = current_user
-		@users = User.all
+		@friends = current_user.friends
+		
+		@users = []
+		all_users = User.where("id != ?", current_user.id)
+		all_users.each do |u|
+			if !@friends.include?u
+				@users.push(u)
+			end
+		end
+
+		@requestors = current_user.requests
 	end
 
 	def search

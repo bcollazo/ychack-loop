@@ -1,3 +1,28 @@
 .user-row {
+	padding: 10px;
 	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+.user-row.active {
+	background: white;
+	color: black;
+}
+.user-row p {
+	margin-bottom: 0;
+}
+.user-row p span {
+	font-weight: 0.5;
+	font-size: 0.8em;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:20px;
+    height:20px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: #abd;
 }

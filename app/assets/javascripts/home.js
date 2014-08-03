@@ -34,7 +34,22 @@ $(document).ready(function() {
 
 	$(".send-request-btn").click(function() {
 		var id = $(this).data("id");
-		$.post("/friend_request", {requestee_id: id}, function(data) {
+		var btn = $(this);
+		if ($(this).text() == "Send Friend Request") {
+			$.post("/friend_request", {requestee_id: id}, function(data) {
+				if (data) {
+					btn.removeClass("btn-primary");
+					btn.addClass("btn-default");
+					btn.attr("disabled", true);
+					btn.text("Request Sent!");
+				}
+			});
+		}
+	});
+
+	$(".accept-request-btn").click(function() {
+		var id = $(this).data("id");
+		$.post("/accept_friend", {requestee_id: id}, function(data) {
 			console.log(data);
 		});
 	});

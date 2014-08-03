@@ -17,6 +17,15 @@ html, body {
 	color: #169f84;
 }
 
+#menuModal .tab-pane {
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+#menuModal .tab-pane p.message {
+	margin-top: 10px;
+}
+
 #menu_tabs li a {
 	color: black !important;
 }
@@ -36,6 +45,11 @@ html, body {
 	padding: 2px;
 }
 
+#sentence p img {
+	margin-top: 20px;
+	height: 50px;
+	cursor: pointer;
+}
 #sentence h1 {
 	font-size: 2.5em !important;
 }

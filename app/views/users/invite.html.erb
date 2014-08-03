@@ -2,11 +2,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-offset-4 col-md-4 col-xs-12">
+				<button class="btn btn-success btn-block">Everyone</button>
 				<% @friends.each do |f| %>
-				<div class="row user-row">
-					<p class="lead"><%= f.name %></p>
+				<div class="row user-row" data-id="<%= f.id %>">
+					<p class="lead">
+						<%= f.name || f.email %><br />
+						<span><%= f.phone %></span>
+					</p>
 				</div>
 				<% end %>
+				<button class="btn btn-success btn-block">Invite</button>
+
 			</div>
 		</div>
 	</div>

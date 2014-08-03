@@ -34,5 +34,19 @@ class User < ActiveRecord::Base
 		return friends
 	end
 
+	def requests
+		reqs = []
+		x = FriendRequest.where("requestee_id = ?", self.id)
+		puts "requestee_id", self.id
+		x.each do |r|
+			u = User.find_by_id(r.requestor_id)
+			if u != nil
+				reqs.push(u)
+			end
+		end
+		return reqs
+	end
+
+
 
 end
