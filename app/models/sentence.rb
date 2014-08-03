@@ -33,9 +33,7 @@ class Sentence < ActiveRecord::Base
 		return matches
 	end
 
-	def self.send_texts(contactList, name)
-		return;
-		
+	def self.send_texts(contactList, name)		
 		account_sid = 'ACf2a92ef7eb689f3b18157adb7e6d0795'
 		auth_token = 'ef3a597812db185905327911f6048f6f'
 
