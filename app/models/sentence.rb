@@ -7,13 +7,29 @@ class Sentence < ActiveRecord::Base
 		end
 		friends = x.friends
 
-
-
 		matches = []
-		# For each friend, check their sentence if any.  Check if match, add to matches
-		puts friends
-		puts "Matching"
+		s = Sentence.find_by_user_id(x.id)
+		friends.each do |f|
+			fs = Sentence.find_by_user_id(f.id)
+			if s.matches(fs)
+				matches.push(f)
+			end
+		end
+
 		return matches
+	end
+
+	def matches(s)
+		a = self.start
+		b = self.end
+		c = s.start
+		d = s.end
+
+		if a <= c
+			return c <= b
+		else
+			return a <= c
+		end
 	end
 
 end
