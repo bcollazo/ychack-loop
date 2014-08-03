@@ -1,8 +1,8 @@
-<div id="home_background" class="night">
+<div class="home_background night">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-offset-4 col-md-4 col-xs-12">
-			<p class="text-center"><%= image_tag("hang_logo_night.png") %></p>
+			<p class="text-center"><%= image_tag("hang_logo_night.png", :class=>"logo") %></p>
 			<% if @matches.count <= 0 %>
 				<p class="text-center lead">No matches yet.  We will notify you when there's a match</p>
 			<% else %>
@@ -14,7 +14,10 @@
 		  				</p>
 		  			</div>
 		  			<div class="col-xs-9">
-		  				<p class="lead"><%= f.name || f.email %></p>
+		  				<p class="lead">
+		  					<%= m.name || m.email %>
+		  					<br />2h 14m Golf Food
+		  				</p>
 		  			</div>
 		  		</div>
 				<% end %>

@@ -7,6 +7,7 @@ class CreateSentences < ActiveRecord::Migration
     	t.integer :duration #in seconds
     	t.string :location
     	t.string :categories, :limit => nil
+        t.string :invitees
 
     	t.timestamps
     end

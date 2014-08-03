@@ -22,22 +22,9 @@ $(document).ready(function() {
 	});
 
 	$("#hang_btn").click(function() {
-		var data = {};
-
-		var hour = parseInt($("#start").data("hour"));
-		var d = new Date();
-		d = new Date(d.getFullYear(), d.getMonth(), d.getDate(), hour, 0, 0, 0)
-		data["start"] = d;
-
-		var duration = parseInt($("#duration").data("duration"));
-		data["duration"] = duration;
-
-		console.log(data);
-		$.post("/sentence", data, function(data) {
-			console.log(data);
-			if (data) {
-				location.href = "/invite"; //Change to effect
-			}
+		// location.href = "/invite";
+		$("#sentence_page").fadeOut(function() {
+			$("#invite_page").fadeIn();	
 		});
 	});
 
@@ -60,6 +47,9 @@ $(document).ready(function() {
 		var id = $(this).data("id");
 		$.post("/accept_friend", {requestee_id: id}, function(data) {
 			console.log(data);
+			if (data) {
+				$(".request-row[data-id="+id+"]").fadeOut();
+			}
 		});
 	});
 
