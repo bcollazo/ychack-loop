@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   post '/friend_request' => 'friends#send_request'
   post '/accept_friend' => 'friends#accept'
 
+  
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
