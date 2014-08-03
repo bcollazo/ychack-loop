@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid" id = "blue-nav">
+  <div class="container-fluid" id = "black-nav">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -14,12 +14,33 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Sign Up</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Mike</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -27,72 +48,29 @@
 
 <div class = "jumbotron">
   <div class = "container-fluid">
-    <div class = "row">
-      <div class= "col-xs-6 col-xs-offset-1" id="jumbo-text">
+    <div class - "row">
+      <div class= "col-xs-8 col-xs-offset-2" id="first-jumbo">
         <h1>Welcome to Hang</h1>
-        <p>Do you want to hang?</p>
-        <div class="row" id ="spacer">
-          <div class="col-xs-6">
-            <form class="form-horizontal">
-              <%= form_for(@user, as: "user", url: registration_path(@user)) do |f| %>
-              <fieldset>
-                <div class="form-group"><%= f.label :email %><br />
-                  <%= f.email_field :email, autofocus: true, :class => 'form-control' %>
-                </div>
-
-                <div class="form-group"><%= f.label :password %><br />
-                  <%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
-                </div>
-
-                <div class = "form-group"><%= f.label :password_confirmation %><br />
-                  <%= f.password_field :password_confirmation, autocomplete: "off", :class => 'form-control' %></div>
-
-                <div><%= f.submit "Sign up", :class => 'btn btn-primary'%></div>
-              <% end %>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class = "col-xs-4" id="fist">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="https://slack-files.com/files-tmb/T02EXT976-F02EY294P-60b524/hang_dark__2_360.png" alt="...">
-            </div>
-            <div class="item">
-              <img src="https://slack-files.com/files-tmb/T02EXT976-F02EY3ACV-09f82e/matches_dark_360.png" alt="...">
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-        </div>
+        <p>Hang answers the question: Who wants to hang?</p>
+        <ul class="list-unstyled">                    
+            <li>Test</li>
+        </ul>
       </div>
     </div>
   </div>
 </div>
 
-	<!-- Graham, this is the form.  Put it anywhere you want and style it with css.  Thanks -->
-
-
-
-<!--
 <div class = "jumbotron">
   <div class = "container">
     <div class= "col-xs-6 col-xs-offset-3 well">
      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         </ol>
+
+        <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
             <div class="new_html_code"></div>
@@ -189,7 +167,6 @@
     </div>
   </div>
 </div>
--->
 
 
       
@@ -215,4 +192,8 @@
               <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
             </tr>
           </tbody>
--->
+          -->
+      </div>
+    </div>
+  </div>
+</div>
