@@ -25,6 +25,9 @@ html, body {
 #sentence a {
 	cursor: pointer;
 }
+#sentence a:hover {
+	text-decoration: none;
+}
 #add_category_btn {
 	cursor: pointer;
 	color: white;
