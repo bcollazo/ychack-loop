@@ -41,6 +41,8 @@ gem 'spring',        group: :development
 # Use Devise
 gem 'devise'
 
+gem 'rails_12factor', group: :production
+
 group :development, :test do
 	gem 'sqlite3'
 end
