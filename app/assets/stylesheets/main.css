@@ -39,6 +39,9 @@
 	background:#1d3043 !important;
 }
 
+.nav.navbar-nav.navbar-right .dropdown-menu {
+	padding: 10px;
+}
 #wiggle img {
 	height:20px;
 }
