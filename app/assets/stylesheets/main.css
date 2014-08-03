@@ -1,23 +1,108 @@
-// Place all the styles related to the Main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-nav {
-	border-radius:10em;
+#black-nav {
+	background-color: #1d3043 !important;
 }
 
-.activate {
+.navbar-brand {
+	color:#1abc9c !important;
+	font-weight: bold !important;
+}
+.dropdown-menu li {
+	background-color: #ffffff !important;
+}
+
+.dropdown-menu a {
+	color: #1d3043 !important;
+}
+
+.nav a {
+	color: #ffffff !important;
+}
+
+.btn-input {
+	display: inline-block;
+}
+
+#dth-block
+{
+	display: block;
+}
+
+.well{
+	background: #1d3043 !important;
+	color: #ffffff;
+}
+
+.carousel-caption {
+	text-align: left !important;
+}
+
+.col-xs-6 p {
+	display: inline-block;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.media-object {
+	border-radius: 100%;
+	border: 1px solid #1abc9c;
+}
+
+div.new_html_code {
+  height:350px;
+  min-width:150px;
+  min-height:100px;
+  overflow-y: scroll;
+}
+
+.media-body p {
+	font-size:  !important;
+}
+#dropdown-button {
+	background: #1d3043 !important;
+}
+
+#dropdown-button span {
+	color: #1abc9c;
+}
+
+#btn-plus {
+	background: #1d3043 !important;
+	color: #1abc9c;
+	border-color: #ccc !important;
+}
+	
+.btn-default span {
+	text-shadow: none;
+}
+
+.btn-group-vertical button {
+	display:inline-block;
+	text-align:center;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+.caret {
+	color: #1abc9c !important;
+}
+
+.list-unstyled {
+	color: #1abc9c;
+}
+
+.jumbotron .dropdown-menu {
+	background: #1d3043;
+}
+
+.jumbotron .dropdown-menu li a{
+	background: #1d3043 !important;
+	color: #1abc9c !important;
+}
+.jumbotron .dropdown-menu li a:hover{
 	font-weight: bold;
 }
 
-.top-nav < li {
-	display: inline;
+.hover-select {
+	color: #08f0c2;
 }
 
-.top-nav {
-	list-style-type: none;
-}
-
-.main-color-scheme {
-	background-color: #77d7c4;
-}
-
+#1abc9c

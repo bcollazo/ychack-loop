@@ -1,14 +1,199 @@
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid" id = "black-nav">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class = "row main-color-scheme">
-    	<div class = "col-md-4 col-md-offset-4">
-    		<ul class="top-nav">
-    			<li class="activate" id="create"><a href = "#">Create</a></li>
-    			<li id = "view"><a href ="#">View</a></li>
-    			<li id="live"><a href="#">Live</a></li>
-    		</ul>
-    	</div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Hang</a>
     </div>
- </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Sign Up</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Mike</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
+
+<div class = "jumbotron">
+  <div class = "container-fluid">
+    <div class - "row">
+      <div class= "col-xs-8 col-xs-offset-2" id="first-jumbo">
+        <h1>Welcome to Hang</h1>
+        <p>Hang answers the question: Who wants to hang?</p>
+        <ul class="list-unstyled">                    
+            <li>Test</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class = "jumbotron">
+  <div class = "container">
+    <div class= "col-xs-6 col-xs-offset-3 well">
+     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="new_html_code"></div>
+            <div class="carousel-caption">
+              <div class="row">
+                <p id = "dth-block">I'm down to hang</p>
+              </div>
+              <div class ="row">
+                <p>at</p>
+                <div class="btn-group btn-input clearfix">
+                  <button type="button" class="btn btn-default dropdown-toggle form-control" id="dropdown-button" data-toggle="dropdown">
+                    <span data-bind="label">now</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class = "row">
+                <p>for</p>
+                <div class="btn-group btn-input clearfix">
+                  <button type="button" class="btn btn-default dropdown-toggle form-control" id="dropdown-button" data-toggle="dropdown">
+                    <span data-bind="label">whenever</span> <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">the night</a></li>
+                    <li><a href="#">one hour</a></li>
+                    <li><a href="#">two hours</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class = "row">
+                <p>I want to</p>
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" id="btn-plus">+</button>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <ul class="list-unstyled">                    
+                    <li>Test</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="item">
+            <div class="new_html_code"></div>
+            <div class="carousel-caption">
+              <div class = "row">
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                      <div class="media">
+                        <a class="pull-left" href="">
+                          <img class="media-object" src="http://img.brothersoft.com/icon/softimage/i/iquotetracker-335801-1265010136.jpeg">
+                        </a>
+                        <div class="media-body">
+                          <a href="#"><h4 class="media-heading">Sarah Turk</h4></a>
+                          <ul class="list-inline">
+                            <li>12m</li>
+                            <li>Basketball</li>
+                            <li>Bars</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item">hit the clubs</a>
+        <a href="#" class="list-group-item">play golf</a>
+        <a href="#" class="list-group-item">eat dinner</a>
+        <a href="#" class="list-group-item">see a movie</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+
+  <!-- Controls -->
+
+
+        <!-- table class = "pics-table">
+          <tbody>
+            <tr>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+            </tr>
+            <tr>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+            </tr>
+            <tr>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+              <td><img src = "http://www.reachingcampus.com/wp-content/uploads/2012/04/hanging-out2.jpg"></td>
+            </tr>
+          </tbody>
+          -->
+      </div>
+    </div>
+  </div>
+</div>
